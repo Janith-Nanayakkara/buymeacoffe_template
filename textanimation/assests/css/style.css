@@ -24,10 +24,15 @@ body{
     list-style: none;
     padding: 0 20px;
     text-shadow: 0 0 10px aqua;
-    animation: slide 12s steps(4) infinite;
+    animation: slide 12s steps(4) infinite,colorful 6s infinite;
 }
 .sec-texts li span{
     position: relative;
+}
+@keyframes colorful {
+    100%{
+        filter: hue-rotate(360deg);
+    }
 }
 .sec-texts li span::before{
     content: '';
@@ -35,13 +40,14 @@ body{
     left: 0;
     width: 400px;
     height: 90px;
-/*    background: red;*/
+    background: black;
     border-left: 2px solid aqua;
     animation: typing 1.5s steps(10) infinite alternate;
 }
 .wrapper .sec-texts{
     height: 90px;
     line-height: 90px;
+    overflow: hidden;
 }
 @keyframes slide {
     100%{
